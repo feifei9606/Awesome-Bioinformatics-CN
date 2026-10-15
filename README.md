@@ -1,4 +1,4 @@
-# Awesome Bioinformatics [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) ![URL Check](https://github.com/danielecook/Awesome-Bioinformatics/workflows/URL%20Check/badge.svg) ![TOC](https://github.com/danielecook/Awesome-Bioinformatics/workflows/TOC/badge.svg)
+# Awesome Bioinformatics [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![Check URLs](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/url-check.yml/badge.svg)](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/url-check.yml) [![Lint Code Base](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/linter.yml/badge.svg)](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/linter.yml)
 
 > 生物信息学（英语：bioinformatics）利用应用数学、信息学、统计学和计算机科学的方法研究生物学的问题。--[维基百科](https://zh.wikipedia.org/wiki/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6)
 
@@ -22,6 +22,7 @@
 - **[SeqAn](https://github.com/seqan/seqan3)** - 基于`C++`的序列分析库
 - **[(Poly)merase](https://github.com/TimothyStiles/poly)** - 合成生物学GO库和命令行工具
 - **[Biocaml](https://github.com/biocaml/biocaml)** - 基于OCaml的高性能生物信息库
+- **[Biojava](https://github.com/biojava/biojava)** - 处理生物数据的Java框架
 
 ## 数据下载
 
@@ -46,6 +47,7 @@
 - **[easy_qsub](https://github.com/shenwei356/easy_qsub)** - 使用脚本模板快速提交PBS任务，支持多个输入文件
 - **GNU Parallel** - 在一台多核的机器上并行执行任务的通用并行器，[这里](https://www.biostars.org/p/63816/)是使用GNU cParallel的一些示例。
 - **[grabix](https://github.com/arq5x/grabix)** - 随机访问BGZF文件的轻量工具。
+- **[grepq](https://github.com/Rbfinch/grepq)** - 通过一条或多条正则表达式匹配reads，实现FASTQ快速过滤
 - **[gsort](https://github.com/brentp/gsort)** - 按照指定顺序排序基因文件
 - **[tabix](https://github.com/samtools/tabix)** - 表格数据建立索引 [ [paper-2011](https://pubmed.ncbi.nlm.nih.gov/21208982) ]
 - **[wormtable](https://github.com/wormtable/wormtable)** - 大型数据集单写多读
@@ -64,7 +66,9 @@
 - **[Cromwell](https://github.com/broadinstitute/cromwell)** - 面向科学工作流程的工作流程管理系统 [ [web](https://cromwell.readthedocs.io) ]
 - **[Galaxy](https://github.com/galaxyproject)** - 一个流行的开源，基于Web的平台，用于数据密集型生物医学研究。 从数据分析到工作流管理再到可视化工具一站式解决 [ [paper-2018](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6030816) | [web](https://galaxyproject.org) ]
 - **[Nextflow](https://github.com/nextflow-io/nextflow) :thumbsup:** - 基于UNIX管道概念建模的流畅DSL，简化了以可移植方式编写并行和可扩展管道的过程。 [ [paper-2018](https://pubmed.ncbi.nlm.nih.gov/29412134) | [web](http://nextflow.io) ]
+- **[redun](https://github.com/insitro/redun)** - 基于Python的流程管理工具
 - **[Ruffus](https://github.com/cgat-developers/ruffus)** - 广泛用于科学和生物信息的计算流程Python库[ [paper-2010](https://pubmed.ncbi.nlm.nih.gov/20847218) | [web](http://www.ruffus.org.uk) ]
+- **[SciPipe](https://github.com/scipipe/scipipe)** - 嵌入Go语言的流程库，专注于支持复杂流程结构、编译为单个可执行文件，并为每个输出提供强大的文件命名和完善的审计报告 [ [paper-2019](https://pubmed.ncbi.nlm.nih.gov/31029061/) | [web](https://scipipe.org/) ]
 - **[SeqWare](https://github.com/SeqWare/seqware)** - 基于Hadoop Oozie的工作流系统用于云环境中的基因组数据分析 [ [paper-2010](https://pubmed.ncbi.nlm.nih.gov/21210981) | [web](https://seqware.github.io) ]
 - **[Snakemake](https://github.com/snakemake/snakemake)**:thumbsup: - Python中的工作流管理系统，旨在通过提供快速舒适的执行环境来降低创建工作流的复杂性 [ [paper-2018](https://pubmed.ncbi.nlm.nih.gov/29788404) | [web](https://snakemake.readthedocs.io) ]
 - **[Workflow Descriptor Language](https://github.com/broadinstitute/wdl)** - Broad开发的流程标准(已archived) [ [web](https://software.broadinstitute.org/wdl) ]
@@ -85,13 +89,14 @@
 
 ### 序列处理
 
-序列处理包括对原始测序数据去除接头和低质量序列。
+序列处理包括对原始测序数据拆分（demultiplexing）、去除接头和低质量序列。
 
 - **[AfterQC](https://github.com/OpenGene/AfterQC)** - 对FASTQ数据自动过滤，triming，移除错误和质控[ [paper-2017](https://pubmed.ncbi.nlm.nih.gov/28361673) ]，后作者使用C++重新实现，成为
 - **[fastp](https://github.com/OpenGene/fastp)** :thumbsup: AfterQC作者使用C++重新实现 [ [paper 2018](https://academic.oup.com/bioinformatics/article/34/17/i884/5093234 )]
 - **[FastQC](https://github.com/s-andrews/FastQC)** - 高通量测序数据FASTQ质控工具 [ [web](http://www.bioinformatics.babraham.ac.uk/projects/fastqc) ]
 - **[Fastqp](https://github.com/mdshw5/fastqp)** - 基于`python`的FASTQ和SAM质控工具
 - **[Fastx Tookit](https://github.com/agordon/fastx_toolkit)** - FASTQ/FASTA 短序列处理工具：去接头，trimming，碱基质量过滤，masking[ [web](http://hannonlab.cshl.edu/fastx_toolkit) ]
+- **[fqtk](https://github.com/fulcrumgenomics/fqtk)** - 基于`Rust`的多线程FASTQ工具包，核心是`fqtk demux`按reads固定位置的barcode做样本拆分，支持双index、UMI（`M`）与单细胞barcode（`C`），另提供`shard`分片与`subsample`抽样子命令
 - **[MultiQC](https://github.com/ewels/MultiQC)** :thumbsup: - 汇总多个样本的生物信息分析结果到一张报告 [ [paper-2016](https://pubmed.ncbi.nlm.nih.gov/27312411) | [web](http://multiqc.info) ]
 - **[SeqFu](https://github.com/telatin/seqfu2)** - 基于Nim的处理FASTA/FASTQ工具集[ [paper-2021](https://www.mdpi.com/2306-5354/8/5/59) | [web](https://telatin.github.io/seqfu2/) ]
 - **[SeqKit](https://github.com/shenwei356/seqkit)** - 基于`Go`的跨平台，超快处理FASTQ/FASTQ文件的工具包[ [paper-2016](https://pubmed.ncbi.nlm.nih.gov/27706213) | [web](https://bioinf.shenwei.me/seqkit) ]
@@ -111,9 +116,13 @@
 
 - **[Bowtie 2](https://github.com/BenLangmead/bowtie2)** - 一种超快速且节约内存的工具，将测序序列与参考序列进行比对。[ [paper-2012](https://pubmed.ncbi.nlm.nih.gov/22388286) | [web](http://bowtie-bio.sourceforge.net/bowtie2) ]
 - **[BWA](https://github.com/lh3/bwa)** - DNA序列间两两比对的Burrow-Wheeler Aligner
+- **[BWA-FastAlign](https://github.com/zzhofict/BWA-FastAlign)** - BWA-MEM的替代品：速度快2-3倍，成本低2-5倍，在标准CPU上输出结果100%一致 [ [paper-2026](https://dl.acm.org/doi/10.1145/3774934.3786421) ]
+- **[minibwa](https://github.com/lh3/minibwa)** - bwa-mem的继任者，用于短读长比对。用BWT建索引+变长种子（同bwa-mem），chaining与SIMD核苷酸比对复用minimap2算法；精度相当的前提下速度是bwa-mem的3倍以上、bwa-mem2的2倍
+- **[strobealign](https://github.com/ksahlin/strobealign)** - 使用strobemer动态种子长度的短读长比对工具，最佳适用读长100–500 bp，通常比同类比对器更快且准确度相当或更优，人基因组建索引4核不到1分钟 [ [paper-2022](https://doi.org/10.1186/s13059-022-02831-7) | [paper-2026](https://doi.org/10.1186/s13059-026-04017-x) ]
 - **[WFA](https://github.com/smarco/WFA)** - wavefront比对算法(WFA)利用序列的相似性加速比对 [ [paper-2020](https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/btaa777/5904262) ]
 - **[Parasail](https://github.com/jeffdaily/parasail)** - 用于全局，半全局和局部序列比对的SIMD C库[ [paper-2016](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-0930-z) ]
 - **[MUMmer](https://github.com/mummer4/mummer)** -  整基因组比对 [ [paper-1999](http://mummer.sourceforge.net/MUMmer.pdf) | [paper-2002](http://mummer.sourceforge.net/MUMmer2.pdf) | [paper-2004](http://mummer.sourceforge.net/MUMmer3.pdf) | [web](http://mummer.sourceforge.net) ]
+- **[DIAMOND](https://github.com/bbuchfink/diamond)** - 超快速蛋白质比对工具，用于类似`blastp`和`blastx`的搜索 [ [paper-2021](https://www.nature.com/articles/s41592-021-01101-x) ]
 
 #### 多序列比对
 
@@ -160,6 +169,7 @@
 - **[Somalier](https://github.com/brentp/somalier)** - BAMs/CRANs/VCFs/GVCFs 快速样本交换及相关性检查 [ [paper-2020](https://pubmed.ncbi.nlm.nih.gov/32664994) ]
 - **[Telseq](https://github.com/zd1/telseq)** - 从全基因组测序数据中估计端粒长度 [ [paper-2014](https://academic.oup.com/nar/article/42/9/e75/1249448) ]
 - **[sambamba](https://github.com/biod/sambamba)**:thumbsup: D语言编写的sam/bam处理工具，markdup等操作较samtools快 [ [Bioinformatics-2015](https://academic.oup.com/bioinformatics/article/31/12/2032/214758) ]
+- **[streammd](https://github.com/delocalizer/streammd)** - 基于Bloom filter的单遍概率性重复标记工具，直接消费qname分组的SAM输入流（如`bwa mem`的输出），重复读段置SAM FLAG `0x400`；默认比Picard MarkDuplicates快约5倍，4 GiB内存可处理约10亿模板 [ [paper-2023](https://doi.org/10.1093/bioinformatics/btad181) ]
 
 ### VCF文件工具
 
@@ -179,13 +189,17 @@
 
 - **[Bam Surgeon](https://github.com/adamewing/bamsurgeon)** -在已有`.bam`文件中添加变异，用于变异检测工具测试 [ [web](https://popmodels.cancercontrol.cancer.gov/gsr/packages/bamsurgeon) ]
 - **[wgsim](https://github.com/lh3/wgsim)** - **Comes with samtools!** - 测序数据模拟 [ [web](https://popmodels.cancercontrol.cancer.gov/gsr/packages/wgsim) ]
+- **[NGSNGS](https://github.com/RAHenriksen/NGSNGS)** - 多线程二代测序数据模拟器，可模拟现代DNA与古DNA、单端/双端数据，支持从FASTA/FASTQ/`bam`输入建库，输出可直接给下游比对流程 [ [paper-2023](https://doi.org/10.1093/bioinformatics/btad041) ]
 
 ### 变异注释
 
 - **[SIFT](https://github.com/teamdfir/sift)** - 预测氨基酸替换是否影响蛋白质功能 [ [paper-2003](https://pubmed.ncbi.nlm.nih.gov/12824425) | [web](http://sift.jcvi.org) ]
 - **[SnpEff](https://github.com/pcingola/SnpEff)** - 遗传变异注释及效果预测工具箱 [ [paper-2012](https://www.tandfonline.com/doi/full/10.4161/fly.19695) | [web](https://pcingola.github.io/SnpEff) ]
 - **[SpliceAI](https://github.com/Illumina/SpliceAI)** - 预测遗传变异对剪切的影响[ [Cell-2020 ](https://linkinghub.elsevier.com/retrieve/pii/S0092867418316295) ]
-- **[ensembl-vep](https://github.com/Ensembl/ensembl-vep)** - 遗传变异注释和效果预测
+- **[Ensembl VEP](https://anaconda.org/bioconda/ensembl-vep)** - 预测变异(SNP、插入、缺失、CNV或结构变异)对基因、转录本、蛋白序列以及调控区域的影响 [ [paper-2016](https://doi.org/10.1186/s13059-016-0974-4) | [web](http://www.ensembl.org/info/docs/tools/vep/index.html) ]
+- **[vep-rs](https://github.com/natera-open-source/vep-rs)** :thumbsup: - 用`Rust`从零重写的Ensembl VEP，沿用VEP的输入/参数、后果术语与输出格式，可"drop-in"替换；缓存需用`--json_cache`指向`vep-cache-builder`（或转换Perl VEP缓存）生成的目录，注释速度比Perl实现快约2个数量级，单染色体峰值内存不超过2.4 GB [ [paper-2026](https://doi.org/10.64898/2026.09.22.753614) ]
+- **[fastVEP](https://github.com/Huang-lab/fastVEP)** - `Rust`编写的高性能变异效应预测器，对标Ensembl VEP与Illumina Nirvana；零外部依赖、单二进制分发、内存占用极低，单线程注释人类WGS比VEP v115.1快约23倍，但在结构变异上一致性远不如VEP [ [paper-2026](https://www.biorxiv.org/content/10.64898/2026.04.14.718452v1) | [web](https://fastvep.org) ]
+- **[ANNOVAR](https://annovar.openbioinformatics.org/en/latest/)** - 遗传变异注释工具，可预测变异对基因、转录本和调控元件的影响，支持自定义数据库整合 [ [paper-2010](https://doi.org/10.1093/nar/gkq603) | [web](https://annovar.openbioinformatics.org/en/latest/) ]
 
 ### Python包
 
@@ -199,16 +213,20 @@
 
 - **[cyvcf](https://github.com/arq5x/cyvcf)** -  [pyVCF](https://github.com/jamescasbon/PyVCF) 使用Cython加速版本
 - **[cyvcf2](https://github.com/brentp/cyvcf2)** - Cython + HTSlib == 快速解析VCF，比pyVCF还快 [ [paper-2017](https://pubmed.ncbi.nlm.nih.gov/28165109) | [web](https://brentp.github.io/cyvcf2) ]
+- **[polars-bio](https://github.com/biodatageeks/polars-bio)** - 在Polars DataFrame上实现极速基因组区间操作和基因组文件格式读写的Python库 [ [paper-2025](https://doi.org/10.1093/bioinformatics/btaf640) | [web](https://biodatageeks.org/polars-bio/) ]
 - **[pyBedTools](https://github.com/daler/pybedtools)** - Python封装的bedtools](https://github.com/arq5x/bedtools). [ [paper-2011](https://pubmed.ncbi.nlm.nih.gov/21949271) | [web](http://daler.github.io/pybedtools) ]
 - **[pyfaidx](https://github.com/mdshw5/pyfaidx)** - Python访问fasta文件
 - **[pysam](https://github.com/pysam-developers/pysam)** - Python封装的[samtools](https://github.com/samtools/samtools). [ [web](https://pysam.readthedocs.io/en/latest/api.html) ]
 - **[pyVCF](https://github.com/jamescasbon/PyVCF)** - Python解析VCF文件 [ [web](http://pyvcf.readthedocs.org/en/latest/index.html) ]
+- **[Scanpy](https://github.com/scverse/scanpy)** - 用于分析单细胞基因表达数据的可扩展工具包，涵盖预处理、可视化、聚类和轨迹推断 [ [paper-2018](https://doi.org/10.1186/s13059-017-1382-0) | [web](https://scanpy.readthedocs.io) ]
 
 ### 组装
 
 
 - **[SPAdes](https://github.com/ablab/spades)** - SPAdes (St. Petersburg genome assembler) 原核生物基因组组装/分析工具集
 - **[SKESA](https://github.com/ncbi/SKESA)** - SKESA，微生物基因组序列重头组装。使用保守的启发式方法，在基因组中的重复区域创建断点。 这会生成高质量的序列，而不会显著影响连续性。
+- **[Minimap2](https://github.com/lh3/minimap2)** - 用于基因组序列和剪接核苷酸序列的双序列比对工具，可进行组装到组装的比对，支持gzip压缩的FASTQ、FASTA格式，也能寻找长读长之间的重叠
+- **[D-GENIES](https://dgenies.toulouse.inra.fr/)** - **D**ot plot large **Gen**omes in an **I**nteractive, **E**fficient and **S**imple way，用于大型基因组比对的在线工具，可交互式改进dot plot可视化。也可作为minimap2的扩展，上传PAF(Pairwise mApping Format)或MAF(Multiple Alignment File)比对结果到D-GENIES
 
 ### 长读长测序
 
@@ -277,16 +295,18 @@
 - [读生物信息学/计算生物学博士/博士后的N个理由(英文)](http://caseybergman.wordpress.com/2012/07/31/top-n-reasons-to-do-a-ph-d-or-post-doc-in-bioinformaticscomputational-biology/)
 - [生物信息学家聚会交流的10步指南(英文)](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2013-14-1-104) - 这是当领域外的人问"你在做什么？"介绍专业的概念的一步步指南。
 - [生物信息学简史 (2039年)(英文)](https://www.youtube.com/watch?v=uwsjwMO-TEA) - C. Titus Brown回归2039年以来的生物信息学，演讲笔记参考[这里](http://ivory.idyll.org/blog/2014-bosc-keynote.html).
-- [再见生物信息学(英文)](http://madhadron.com/posts/2012-03-26-a-farewell-to-bioinformatics.html) - 对生物信息学的批判观点
+- [再见生物信息学(英文)](https://madhadron.com/science/farewell_to_bioinformatics.html) - 对生物信息学的批判观点
 - [著名生物信息学系列采访](http://www.acgt.me/blog/2014/3/25/101-questions-a-new-series-of-interviews-with-notable-bioinformaticians) - 著名生物信息学家采访，对当今生物信息学研究现状的看法及职业规划有帮助
 - [开源的生物信息学社会大学](https://github.com/ossu/bioinformatics) - 生物信息学免费课程
 - [Rosalind](http://rosalind.info/) - Rosalind是一个通过解决问题学习生物信息学的平台
+- [生物信息学算法(英文)](https://www.bioinformaticsalgorithms.org/read-the-book) - Phillip Compeau和Pavel Pevzner编写的教材，前五章可免费在线阅读
 - [写给孤独生物信息学家的指南(英文)](http://www.opiniomics.org/a-guide-for-the-lonely-bioinformatician/) - 本指南针对生物信息学家的职业发展。
 - [生物信息学简史](https://doi.org/10.1093/bib/bby063)
 
 ### 其它Awesome Bioinformatics
 
 - [Awesome-alternative-splicing](https://github.com/HussainAther/awesome-alternative-splicing) - 可变剪切软件，数据库，工具的资源库
+- [Awesome AI-based Protein Design](https://github.com/opendilab/awesome-AI-based-protein-design) - AI蛋白质设计相关的研究论文集
 
 ### 测序
 
@@ -316,6 +336,7 @@
 - [Genomics, Big Data and Medicine Seminar Series](https://www.youtube.com/playlist?list=PLqLDR0CTP9_pboZCk6gR9Zn4kW7h9XWJI) - 关于基因组学，大数据，医药的系列研讨会
 - [Rafael Irizarry's Channel](https://www.youtube.com/user/RafalabChannel/videos) - Rafael Irizarry关于基因组统计学的学术报告
 - [NIH VideoCasting and Podcasting](https://www.youtube.com/user/nihvcast) - NIH直播，不仅是基因组学和生物信息学，还包括其它特定领域使用生物信息学和基因组学的精彩演讲
+- [生物信息学算法课程视频(英文)](https://www.bioinformaticsalgorithms.org/lecture-videos) - 配套Phillip Compeau和Pavel Pevzner《Bioinformatics Algorithms》教材的免费课程视频
 
 ### 博客
 
@@ -323,6 +344,7 @@
 - [Opiniomics](http://www.opiniomics.org/) - Mick Watson的博客，主要关于生物信息学，基因组学和生物学
 - [Bits of DNA](https://liorpachter.wordpress.com/) - Lior Pachter的博客，主要关于计算生物学的综述和评论
 - [it is NOT junk](http://www.michaeleisen.org/blog/) - Michael Eisen的博客，主要关于基因组学，DNA，进化
+- [#!/perl/bioinfo](https://bioinfoperl.blogspot.com) - EEAD-CSIC计算与结构生物学组用西班牙语和英语撰写的博客，内容涉及植物基因组学、计算与结构生物学的方法和代码
 
 ### 其它
 
@@ -331,6 +353,7 @@
 - [Perl是如何拯救人类基因组计划(英文)](http://www.foo.be/docs/tpj/issues/vol1_2/tpj0102-0001.html) - Lincoln D. Stein的一则轶闻，关于人类基因组计划中Perl语言的重要性
 - [Nature Biotechnology/PLos Computational Biology科普文章(英文)](https://liacs.leidenuniv.nl/~hoogeboomhj/mcb/nature_primer.html) - Nature Biotechnology和PLos Computational Biology上关于计算生物学和生物信息学各种方法的入门的科普文章链接
 - [PeerJ生物信息软件工具集](https://peerj.com/collections/45-bioinformatics-software/) - Keith Crandall and Claus White整理的PeerJ上有趣，创新及香瓜你的生物信息学工具
+- [Biological Modeling](https://biologicalmodeling.org/) - 生物系统建模的免费在线课程，涵盖图灵斑图、转录因子网络基序、细菌趋化性、冠状病毒刺突蛋白以及白细胞图像分类
 
 ## 在线社区
 
