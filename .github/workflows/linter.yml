@@ -34,8 +34,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
           # super-linter 只从 LINTER_RULES_PATH 读取 linter 配置（默认值即 .github/linters），
-          # 仓库根目录的 .markdownlint.json 不会被读取（super-linter issue #5101）；
-          # 根目录那份保留给本地 markdownlint / 编辑器使用。
+          # 而且是以 `markdownlint -c <path>` 显式传参（lib/functions/linterCommands.sh），
+          # 所以仓库根目录的配置文件对它无效（另见 super-linter issue #5101）。
+          # 根目录原先的 .markdownlint.json 已删除：CI 不读它，本仓库也不用编辑器 lint 插件，
+          # 同时留两份规则集只会让两边不一致。
           LINTER_RULES_PATH: .github/linters
 
           # 这里用「包含」模式：只显式开启需要的 linter，未列出的自动关闭
