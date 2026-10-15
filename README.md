@@ -299,6 +299,7 @@
 - [著名生物信息学系列采访](http://www.acgt.me/blog/2014/3/25/101-questions-a-new-series-of-interviews-with-notable-bioinformaticians) - 著名生物信息学家采访，对当今生物信息学研究现状的看法及职业规划有帮助
 - [开源的生物信息学社会大学](https://github.com/ossu/bioinformatics) - 生物信息学免费课程
 - [Rosalind](http://rosalind.info/) - Rosalind是一个通过解决问题学习生物信息学的平台
+- [生物信息学101计划课件资源](https://bis.zju.edu.cn/bioinfo101/ppt_resources/) :thumbsup: - 教育部生物科学"101计划"《生物信息学（含生物统计学）》核心课程（浙江大学陈铭、上海交通大学吕晖牵头，33所高校参与）的配套课件，共13章，覆盖生物统计学基础、深度学习与人工智能、生物信息资源、序列比对、基因组学与宏基因组学、转录组学、转录调控与表观遗传、蛋白质与代谢组学、表型组学、系统生物学、生物信息学应用与编程，提供师资培训版PPT下载，中文，适合系统入门与教师备课
 - [生物信息学算法(英文)](https://www.bioinformaticsalgorithms.org/read-the-book) - Phillip Compeau和Pavel Pevzner编写的教材，前五章可免费在线阅读
 - [写给孤独生物信息学家的指南(英文)](http://www.opiniomics.org/a-guide-for-the-lonely-bioinformatician/) - 本指南针对生物信息学家的职业发展。
 - [生物信息学简史](https://doi.org/10.1093/bib/bby063)
