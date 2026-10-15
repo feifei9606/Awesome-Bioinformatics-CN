@@ -12,7 +12,7 @@
 
 ## 软件包套件
 
-软件包套件收录用于特定语言或平台的生物信息学软件包和安装工具。 
+软件包套件收录用于特定语言或平台的生物信息学软件包和安装工具。
 
 - **[Bioconductor](https://github.com/Bioconductor)** - 基于`R`语言的用于分析高通量数据的工具平台，截至到3.12版本已收录1900多个软件包[ [paper-2004](https://link.springer.com/article/10.1186/gb-2004-5-10-r80) | [web](https://www.bioconductor.org) ]
 - **[Biopython](https://github.com/biopython/biopython)** - 基于`Python`的进行生物计算的免费工具，包括使用技巧，包以及详细文档。属于 [Open Bioinformatics Foundation](http://open-bio.org/)的一部分，同时也包含NCBI eutils的API来访问NCBI数据库[ [paper-2009](https://pubmed.ncbi.nlm.nih.gov/19304878) | [web](https://biopython.org) ]
@@ -85,7 +85,7 @@
 ### 格式转化
 
 - **[seqmagick](https://github.com/fhcrc/seqmagick)** - 方便使用Biopython进行文件格式转化 [ [web](http://seqmagick.readthedocs.io) ]
-- **[bioconvert](https://github.com/bioconvert/bioconvert)** :thumbsup: - 目前支持45种格式，95种转换[ [web](https://bioconvert.readthedocs.io/en/master/) ] 
+- **[bioconvert](https://github.com/bioconvert/bioconvert)** :thumbsup: - 目前支持45种格式，95种转换[ [web](https://bioconvert.readthedocs.io/en/master/) ]
 
 ### 序列处理
 
@@ -176,7 +176,7 @@
 - **[bcftools](https://github.com/samtools/bcftools)**:thumbsup: - VCF文件操作的工具及 变异检测[ [paper-2016](https://pubmed.ncbi.nlm.nih.gov/26826718) | [paper-2017](https://pubmed.ncbi.nlm.nih.gov/28205675) | [web](http://samtools.github.io/bcftools) ]
 - **[vcfanno](https://github.com/brentp/vcfanno)** - 使用VCFs/BEDs/tabixed文件注释VCF [ [paper-2016](https://pubmed.ncbi.nlm.nih.gov/27250555) ]
 - **[vcflib](https://github.com/vcflib/vcflib)** - 解析和操作VCF文件的C++库
-- **[vcftools](https://github.com/vcftools/vcftools)** - VCF操作和统计(比如连锁不平衡，等位基因频率，Fst)[ [paper-2011](https://pubmed.ncbi.nlm.nih.gov/21653522) ]
+- **[vcftools](https://github.com/vcftools/vcftools)** - VCF操作和统计（比如连锁不平衡，等位基因频率，Fst）[ [paper-2011](https://pubmed.ncbi.nlm.nih.gov/21653522) ]
 
 ### GFF/BED文件工具
 
@@ -195,7 +195,7 @@
 
 - **[SIFT](https://github.com/teamdfir/sift)** - 预测氨基酸替换是否影响蛋白质功能 [ [paper-2003](https://pubmed.ncbi.nlm.nih.gov/12824425) | [web](http://sift.jcvi.org) ]
 - **[SnpEff](https://github.com/pcingola/SnpEff)** - 遗传变异注释及效果预测工具箱 [ [paper-2012](https://www.tandfonline.com/doi/full/10.4161/fly.19695) | [web](https://pcingola.github.io/SnpEff) ]
-- **[SpliceAI](https://github.com/Illumina/SpliceAI)** - 预测遗传变异对剪切的影响[ [Cell-2020 ](https://linkinghub.elsevier.com/retrieve/pii/S0092867418316295) ]
+- **[SpliceAI](https://github.com/Illumina/SpliceAI)** - 预测遗传变异对剪切的影响[ [Cell-2020](https://linkinghub.elsevier.com/retrieve/pii/S0092867418316295) ]
 - **[Ensembl VEP](https://anaconda.org/bioconda/ensembl-vep)** - 预测变异(SNP、插入、缺失、CNV或结构变异)对基因、转录本、蛋白序列以及调控区域的影响 [ [paper-2016](https://doi.org/10.1186/s13059-016-0974-4) | [web](http://www.ensembl.org/info/docs/tools/vep/index.html) ]
 - **[vep-rs](https://github.com/natera-open-source/vep-rs)** :thumbsup: - 用`Rust`从零重写的Ensembl VEP，沿用VEP的输入/参数、后果术语与输出格式，可"drop-in"替换；缓存需用`--json_cache`指向`vep-cache-builder`（或转换Perl VEP缓存）生成的目录，注释速度比Perl实现快约2个数量级，单染色体峰值内存不超过2.4 GB [ [paper-2026](https://doi.org/10.64898/2026.09.22.753614) ]
 - **[fastVEP](https://github.com/Huang-lab/fastVEP)** - `Rust`编写的高性能变异效应预测器，对标Ensembl VEP与Illumina Nirvana；零外部依赖、单二进制分发、内存占用极低，单线程注释人类WGS比VEP v115.1快约23倍，但在结构变异上一致性远不如VEP [ [paper-2026](https://www.biorxiv.org/content/10.64898/2026.04.14.718452v1) | [web](https://fastvep.org) ]
@@ -220,8 +220,7 @@
 - **[pyVCF](https://github.com/jamescasbon/PyVCF)** - Python解析VCF文件 [ [web](http://pyvcf.readthedocs.org/en/latest/index.html) ]
 - **[Scanpy](https://github.com/scverse/scanpy)** - 用于分析单细胞基因表达数据的可扩展工具包，涵盖预处理、可视化、聚类和轨迹推断 [ [paper-2018](https://doi.org/10.1186/s13059-017-1382-0) | [web](https://scanpy.readthedocs.io) ]
 
-### 组装
-
+### 基因组组装
 
 - **[SPAdes](https://github.com/ablab/spades)** - SPAdes (St. Petersburg genome assembler) 原核生物基因组组装/分析工具集
 - **[SKESA](https://github.com/ncbi/SKESA)** - SKESA，微生物基因组序列重头组装。使用保守的启发式方法，在基因组中的重复区域创建断点。 这会生成高质量的序列，而不会显著影响连续性。
@@ -242,7 +241,6 @@
 - **[Prokka](https://github.com/tseemann/prokka)** - 快速进行原核基因组注释，Prokka是微生物基因组注释最常用的工具之一。
 - **[Bakta](https://github.com/oschwengers/bakta)** - Bakta 是一种用于对细菌基因组和质粒进行快速和标准化注释的工具。 它以 JSON 和生物信息学标准文件格式提供dbxref -rich和 sORF 的注释，用于自动下游分析。
 - **[Bacannot](https://github.com/fmalmeida/bacannot)** - 基于Nextflow的细菌基因组注释的流程 [ [web](https://bacannot.readthedocs.io/en/latest/?badge=latest) ]
-
 
 ## 可视化
 
