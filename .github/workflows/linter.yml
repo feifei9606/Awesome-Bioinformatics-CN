@@ -1,23 +1,54 @@
+---
 name: 🧹 Lint Code Base
 on:
   push:
     branches: [master]
   pull_request:
     branches: [master]
+
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Lint Code Base
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
+        with:
+          # super-linter 需要完整历史才能算出「本次改了哪些文件」
+          fetch-depth: 0
+
       - name: Lint Code Base
-        uses: github/super-linter@v3
+        # 原先用的是 github/super-linter@v3。该仓库已归档，且 v3 是浮动短标签，
+        # 它现在解析到的 ghcr.io/github/super-linter:v3.17.1 镜像并不完整：
+        # 容器内缺 lib/functions/tapLibrary.sh 与 lib/functions/linterVersions.txt，
+        # 导致 linter.sh 在运行任何 linter 之前就 FATAL 退出
+        # （报错：Failed to view version file）。
+        # 这也是这个 step 一直失败、且与 README 内容无关的原因。
+        # 官方建议钉到完整语义化版本标签 —— 短标签（如 v9）不保证不可变。
+        uses: super-linter/super-linter@v9.0.0
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_MARKDOWN: true
-          # 显式指定规则目录：super-linter 只从这里读 linter 配置，
-          # 不会读仓库根目录的 .markdownlint.json（见 .github/linters/.markdown-lint.yml 内注释）
+          # super-linter 只从 LINTER_RULES_PATH（默认 .github/linters）读取 linter 配置，
+          # 仓库根目录的 .markdownlint.json 不会被读取（super-linter issue #5101）。
+          # 根目录那份保留给本地 markdownlint / 编辑器使用。
           LINTER_RULES_PATH: .github/linters
+
+          # 本仓库实际只有 Markdown 内容需要检查，其余 linter 一律关闭。
+          # 否则 Prettier / textlint / codespell / yamllint / actionlint 等
+          # 会对 README 与 workflow 文件提出与内容无关的格式化要求。
+          VALIDATE_MARKDOWN: true
+          VALIDATE_MARKDOWN_PRETTIER: false
+          VALIDATE_NATURAL_LANGUAGE: false
+          VALIDATE_SPELL_CODESPELL: false
+          VALIDATE_EDITORCONFIG: false
+          VALIDATE_JSCPD: false
+          VALIDATE_PRE_COMMIT: false
+          VALIDATE_YAML: false
+          VALIDATE_YAML_PRETTIER: false
+          VALIDATE_GITHUB_ACTIONS: false
+          VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
