@@ -171,6 +171,7 @@
 
 - **[Bowtie 2](https://github.com/BenLangmead/bowtie2)** - 一种超快速且节约内存的工具，将测序序列与参考序列进行比对。[ [paper-2012](https://pubmed.ncbi.nlm.nih.gov/22388286) | [web](http://bowtie-bio.sourceforge.net/bowtie2) ]
 - **[BWA](https://github.com/lh3/bwa)** - DNA序列间两两比对的Burrow-Wheeler Aligner
+- **[bwa-mem2](https://github.com/bwa-mem2/bwa-mem2)** - BWA-MEM的下一代实现：比对结果与bwa一致，靠SIMD与多核架构优化快约1.3-3.1倍（视数据与机器）；索引经2bit.64压缩后人类基因组磁盘与内存占用各约10GB，但需用`bwa-mem2 index`单独建索引，建索引峰值内存约28N GB（N为参考基因组大小） [ [paper-2019](https://doi.org/10.1109/IPDPS.2019.00041) ]
 - **[BWA-FastAlign](https://github.com/zzhofict/BWA-FastAlign)** - BWA-MEM的替代品：速度快2-3倍，成本低2-5倍，在标准CPU上输出结果100%一致 [ [paper-2026](https://dl.acm.org/doi/10.1145/3774934.3786421) ]
 - **[minibwa](https://github.com/lh3/minibwa)** - bwa-mem的继任者，用于短读长比对。用BWT建索引+变长种子（同bwa-mem），chaining与SIMD核苷酸比对复用minimap2算法；精度相当的前提下速度是bwa-mem的3倍以上、bwa-mem2的2倍
 - **[strobealign](https://github.com/ksahlin/strobealign)** - 使用strobemer动态种子长度的短读长比对工具，最佳适用读长100–500 bp，通常比同类比对器更快且准确度相当或更优，人基因组建索引4核不到1分钟 [ [paper-2022](https://doi.org/10.1186/s13059-022-02831-7) | [paper-2026](https://doi.org/10.1186/s13059-026-04017-x) ]
@@ -210,6 +211,7 @@
 - **[lumpy](https://github.com/arq5x/lumpy-sv)** - 基于概率框架检测结构变异 [ [paper-2014](https://link.springer.com/article/10.1186/gb-2014-15-6-r84) ]
 - **[manta](https://github.com/Illumina/manta)** - 从双端比对数据中检测结构变异和Indel [ [paper-2015](https://pubmed.ncbi.nlm.nih.gov/26647377) ]
 - **[gridss](https://github.com/PapenfussLab/gridss)** - 基因组重排检测工具集 [ [paper-2017](https://pubmed.ncbi.nlm.nih.gov/29097403) ]
+- **[GATK-SV](https://github.com/broadinstitute/gatk-sv)** - Broad面向Illumina短读长WGS的结构变异检测流程，用`WDL`/`Cromwell`编排（官方支持Terra云端），整合深度与读长等多类证据并输出队列级VCF [ [paper-2020](https://doi.org/10.1038/s41586-020-2287-8) | [web](https://broadinstitute.github.io/gatk-sv/) ]
 - **[smoove](https://github.com/brentp/smoove)** - 结构变异检测，基因分型
 - **[cnvkit](https://github.com/etal/cnvkit)** - 靶向DNA测序拷贝数变异检测 [ [paper-2016](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004873) ]
 
