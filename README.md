@@ -1,4 +1,4 @@
-# Awesome Bioinformatics [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![Check URLs](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/url-check.yml/badge.svg)](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/url-check.yml) [![Lint Code Base](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/linter.yml/badge.svg)](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/linter.yml)
+# Awesome Bioinformatics [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![Check URLs](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/url-check.yml/badge.svg)](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/url-check.yml) [![Lint Code Base](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/linter.yml/badge.svg)](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/linter.yml) [![Generate TOC](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/toc.yml/badge.svg)](https://github.com/feifei9606/Awesome-Bioinformatics-CN/actions/workflows/toc.yml)
 
 > 生物信息学（英语：bioinformatics）利用应用数学、信息学、统计学和计算机科学的方法研究生物学的问题。--[维基百科](https://zh.wikipedia.org/wiki/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6)
 
@@ -7,6 +7,61 @@
 ---
 
 生物信息学软件，资源和工具库的精选列表。 大多数为命令行，免费或开源工具。 欢迎提交[pull request](./CONTRIBUTING.md)~
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## 目录
+
+- [软件包套件](#%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%A5%97%E4%BB%B6)
+- [数据下载](#%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD)
+- [数据压缩](#%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9)
+- [数据处理](#%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86)
+  - [命令行工具](#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7)
+- [二代测序](#%E4%BA%8C%E4%BB%A3%E6%B5%8B%E5%BA%8F)
+  - [流程管理](#%E6%B5%81%E7%A8%8B%E7%AE%A1%E7%90%86)
+  - [生信流程](#%E7%94%9F%E4%BF%A1%E6%B5%81%E7%A8%8B)
+  - [格式转化](#%E6%A0%BC%E5%BC%8F%E8%BD%AC%E5%8C%96)
+  - [序列处理](#%E5%BA%8F%E5%88%97%E5%A4%84%E7%90%86)
+  - [数据分析](#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90)
+  - [序列比对](#%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9)
+    - [双序列比对](#%E5%8F%8C%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9)
+    - [多序列比对](#%E5%A4%9A%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9)
+    - [聚类](#%E8%81%9A%E7%B1%BB)
+  - [表达定量](#%E8%A1%A8%E8%BE%BE%E5%AE%9A%E9%87%8F)
+  - [富集分析](#%E5%AF%8C%E9%9B%86%E5%88%86%E6%9E%90)
+  - [变异检测](#%E5%8F%98%E5%BC%82%E6%A3%80%E6%B5%8B)
+    - [结构变异检测](#%E7%BB%93%E6%9E%84%E5%8F%98%E5%BC%82%E6%A3%80%E6%B5%8B)
+  - [BAM文件工具](#bam%E6%96%87%E4%BB%B6%E5%B7%A5%E5%85%B7)
+  - [VCF文件工具](#vcf%E6%96%87%E4%BB%B6%E5%B7%A5%E5%85%B7)
+  - [GFF/BED文件工具](#gffbed%E6%96%87%E4%BB%B6%E5%B7%A5%E5%85%B7)
+  - [变异模拟](#%E5%8F%98%E5%BC%82%E6%A8%A1%E6%8B%9F)
+  - [变异注释](#%E5%8F%98%E5%BC%82%E6%B3%A8%E9%87%8A)
+  - [Python包](#python%E5%8C%85)
+    - [数据](#%E6%95%B0%E6%8D%AE)
+    - [工具](#%E5%B7%A5%E5%85%B7)
+  - [基因组组装](#%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%BB%84%E8%A3%85)
+  - [长读长测序](#%E9%95%BF%E8%AF%BB%E9%95%BF%E6%B5%8B%E5%BA%8F)
+    - [组装](#%E7%BB%84%E8%A3%85)
+  - [注释](#%E6%B3%A8%E9%87%8A)
+- [可视化](#%E5%8F%AF%E8%A7%86%E5%8C%96)
+  - [基因组浏览器/基因图](#%E5%9F%BA%E5%9B%A0%E7%BB%84%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9F%BA%E5%9B%A0%E5%9B%BE)
+  - [Circos相关](#circos%E7%9B%B8%E5%85%B3)
+  - [染色体可视化](#%E6%9F%93%E8%89%B2%E4%BD%93%E5%8F%AF%E8%A7%86%E5%8C%96)
+  - [Venn图](#venn%E5%9B%BE)
+- [数据库访问](#%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BF%E9%97%AE)
+- [资源](#%E8%B5%84%E6%BA%90)
+  - [成为一个生物信息学家](#%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E5%AE%B6)
+  - [其它Awesome Bioinformatics](#%E5%85%B6%E5%AE%83awesome-bioinformatics)
+  - [测序](#%E6%B5%8B%E5%BA%8F)
+  - [RNA-Seq](#rna-seq)
+  - [ChIP-Seq](#chip-seq)
+  - [YouTube频道和播放列表](#youtube%E9%A2%91%E9%81%93%E5%92%8C%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8)
+  - [博客](#%E5%8D%9A%E5%AE%A2)
+  - [其它](#%E5%85%B6%E5%AE%83)
+- [在线社区](#%E5%9C%A8%E7%BA%BF%E7%A4%BE%E5%8C%BA)
+- [许可](#%E8%AE%B8%E5%8F%AF)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ---
 
@@ -214,7 +269,7 @@
 - **[cyvcf](https://github.com/arq5x/cyvcf)** -  [pyVCF](https://github.com/jamescasbon/PyVCF) 使用Cython加速版本
 - **[cyvcf2](https://github.com/brentp/cyvcf2)** - Cython + HTSlib == 快速解析VCF，比pyVCF还快 [ [paper-2017](https://pubmed.ncbi.nlm.nih.gov/28165109) | [web](https://brentp.github.io/cyvcf2) ]
 - **[polars-bio](https://github.com/biodatageeks/polars-bio)** - 在Polars DataFrame上实现极速基因组区间操作和基因组文件格式读写的Python库 [ [paper-2025](https://doi.org/10.1093/bioinformatics/btaf640) | [web](https://biodatageeks.org/polars-bio/) ]
-- **[pyBedTools](https://github.com/daler/pybedtools)** - Python封装的bedtools](https://github.com/arq5x/bedtools). [ [paper-2011](https://pubmed.ncbi.nlm.nih.gov/21949271) | [web](http://daler.github.io/pybedtools) ]
+- **[pyBedTools](https://github.com/daler/pybedtools)** - Python封装的bedtools. [ [paper-2011](https://pubmed.ncbi.nlm.nih.gov/21949271) | [web](http://daler.github.io/pybedtools) ]
 - **[pyfaidx](https://github.com/mdshw5/pyfaidx)** - Python访问fasta文件
 - **[pysam](https://github.com/pysam-developers/pysam)** - Python封装的[samtools](https://github.com/samtools/samtools). [ [web](https://pysam.readthedocs.io/en/latest/api.html) ]
 - **[pyVCF](https://github.com/jamescasbon/PyVCF)** - Python解析VCF文件 [ [web](http://pyvcf.readthedocs.org/en/latest/index.html) ]

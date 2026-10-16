@@ -1,0 +1,40 @@
+---
+name: 🌴 Generate TOC
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+# 两者并发跑同一个分支时会互相抢推送，用 workflow+ref 串行化。
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+# 该 action 的职责就是把重新生成的目录**提交并推回**触发它的分支，所以必须给写权限
+# （GITHUB_TOKEN 默认权限可能只有只读；对照 linter.yml 里显式声明 contents: read 的写法）。
+permissions:
+  contents: write
+
+jobs:
+  generateTOC:
+    name: TOC Generator
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    # fork 来的 PR 里 GITHUB_TOKEN 一律只读，action 推不回去必然失败；这类 PR 直接跳过，
+    # 等合并到 master 后由 push 那次运行补齐目录。
+    # （action 作者自己的 workflow 也是这么挡的：
+    #   technote-space/toc-generator/.github/workflows/toc.yml 用 head.user.id == base.user.id 判断。）
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      # 不需要 actions/checkout：action 自己会 git init + fetch 再切到目标分支
+      # （@technote-space/github-action-helper 的 addOrigin 在未克隆工作区时会重建仓库）。
+      - name: Generate TOC
+        # 上游 danielecook/Awesome-Bioinformatics 用的就是这个 action；
+        # 这里从上游的 v2 钉到最新完整语义化版本 v4.3.1（浮动短标签不保证不可变，
+        # 与 linter.yml 里 super-linter 钉 v9.0.0 是同一个理由）。
+        # 它内置的是 doctoc（@technote-space/doctoc，即 doctoc 2.x 的分支），
+        # 生成的锚点与本地 `doctoc README.md --title '## 目录'` 完全一致。
+        uses: technote-space/toc-generator@v4.3.1
+        with:
+          # 标题必须与 README 里实际写的那个 h2 完全一致，否则每次运行都会把标题改掉。
+          TOC_TITLE: "## 目录"
