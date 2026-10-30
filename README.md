@@ -414,6 +414,7 @@
 - [Perl是如何拯救人类基因组计划(英文)](http://www.foo.be/docs/tpj/issues/vol1_2/tpj0102-0001.html) - Lincoln D. Stein的一则轶闻，关于人类基因组计划中Perl语言的重要性
 - [Nature Biotechnology/PLos Computational Biology科普文章(英文)](https://liacs.leidenuniv.nl/~hoogeboomhj/mcb/nature_primer.html) - Nature Biotechnology和PLos Computational Biology上关于计算生物学和生物信息学各种方法的入门的科普文章链接
 - [PeerJ生物信息软件工具集](https://peerj.com/collections/45-bioinformatics-software/) - Keith Crandall和Claus White整理的PeerJ上有趣、创新及吸引人的生物信息学工具
+- [bio.tools](https://bio.tools) - ELIXIR维护的生物信息学软件与数据库注册库，按EDAM本体标注功能、数据类型与操作，提供标准化元数据与API检索，目前收录约3.4万个工具/数据库 [ [paper-2016](https://doi.org/10.1093/nar/gkv1116) ]
 - [Biological Modeling](https://biologicalmodeling.org/) - 生物系统建模的免费在线课程，涵盖图灵斑图、转录因子网络基序、细菌趋化性、冠状病毒刺突蛋白以及白细胞图像分类
 
 ## 在线社区
