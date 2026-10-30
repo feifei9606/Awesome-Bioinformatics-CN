@@ -69,6 +69,7 @@
 
 软件包套件收录用于特定语言或平台的生物信息学软件包和安装工具。
 
+- **[Bioperl](https://github.com/bioperl/bioperl-live)** - 开源Perl生物信息学工具的用户与开发者社区（BioPerl 1.x核心代码库），覆盖生物信息学、基因组学与生命科学 [ [paper-2002](https://doi.org/10.1101/gr.361602) | [web](https://bioperl.org) ]
 - **[Bioconductor](https://github.com/Bioconductor)** - 基于`R`语言的用于分析高通量数据的工具平台，截至3.12版本已收录1900多个软件包[ [paper-2004](https://link.springer.com/article/10.1186/gb-2004-5-10-r80) | [web](https://www.bioconductor.org) ]
 - **[Biopython](https://github.com/biopython/biopython)** - 基于`Python`的生物计算免费工具，包含使用技巧、软件包与详细文档。属于 [Open Bioinformatics Foundation](http://open-bio.org/)的一部分，同时也包含NCBI eutils的API来访问NCBI数据库[ [paper-2009](https://pubmed.ncbi.nlm.nih.gov/19304878) | [web](https://biopython.org) ]
 - **[Bioconda](https://github.com/bioconda)** - [conda包管理器](http://conda.pydata.org/docs/intro.html)中专门针对生物信息学软件的一个channel，包括3000+的生物信息学软件包[ [paper-2018](https://pubmed.ncbi.nlm.nih.gov/29967506) | [web](https://bioconda.github.io) ]
@@ -133,6 +134,7 @@
 - **[Awesome-Pipeline](https://github.com/pditommaso/awesome-pipeline)** - 流程资源列表
 - **[Bactopia](https://github.com/bactopia/bactopia/)** - 基于Nextflow的细菌基因组分析流程 [ [web](https://bactopia.github.io/) ]
 - **[bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen)** - 已验证可扩展的，社区开发的变异检测，注释，预测，RNA-seq和小RNA分析流程 [ [web](https://bcbio-nextgen.readthedocs.io) ]
+- **[R-Peridot](https://github.com/pentalpha/r-peridot)** - 带图形界面的可定制差异表达（DGE）分析流程
 - **[snakepipes](https://github.com/maxplanck-ie/snakepipes):thumbsup:** - 基于snakemake的流程，包括ChIP-seq，mRNA-seq，noncoding-RNA-seq，ATAC-seq，scRNA-seq，Hi-C，Whole Genome Bisulfite Seq/WGBS [ [paper-2019](https://academic.oup.com/bioinformatics/article/35/22/4757/5499080) ]
 - **[nf-core](https://github.com/nf-core)**:thumbsup: - 基于Nextflow的社群维护的精选分析流程
 - **[ngs-preprocess](https://github.com/fmalmeida/ngs-preprocess)** - 基于Nextflow的预处理短/长读长reads流程 [ [web](https://ngs-preprocess.readthedocs.io/en/latest/?badge=latest) ]
@@ -313,6 +315,7 @@
 - **[IGV js](https://github.com/igvteam/igv)**:thumbsup: - 基于Java的基因组浏览器，同时提供JS版本。支持多种数据格式 [ [paper-2019](https://pubmed.ncbi.nlm.nih.gov/31099383) | [web](https://software.broadinstitute.org/software/igv) ]
 - **[Island Plot](https://github.com/lairdm/islandplot)** - 基于D3的基因组浏览器[ [paper-2015](https://pubmed.ncbi.nlm.nih.gov/25916842/) ]
 - **[JBrowse](https://github.com/GMOD/jbrowse)** - 通过插件和track个性化高度定制的基因组浏览器 [ [paper-2016](https://pubmed.ncbi.nlm.nih.gov/27072794) | [web](http://jbrowse.org/) ]
+- **Lucid Align** - 现代化的序列比对可视化工具（网页版） [ [web](https://lucidalign.com) ]
 - **[PHAT](https://github.com/chgibb/PHAT)** - 病原-宿主可视化分析工具 [ [paper-2018](https://pubmed.ncbi.nlm.nih.gov/30561651) | [web](https://chgibb.github.io/PHATDocs) ]
 - **[pileup.js](https://github.com/hammerlab/pileup.js)** - 可交互，高度定制的基于web的基因组浏览器JS库 [ [paper-2016](https://pubmed.ncbi.nlm.nih.gov/27153605) ]
 - **[scribl](https://github.com/chmille4/Scribl)** - HTML5 canvas 基因组图形库 [ [paper-2012](https://pubmed.ncbi.nlm.nih.gov/23172864) | [web](http://chmille4.github.io/Scribl) ]
@@ -322,9 +325,11 @@
 ### Circos相关
 
 - **[Circos](https://github.com/vigsterkr/circos)** - 基因组数据环形可视化Perl包 [ [paper-2009](https://pubmed.ncbi.nlm.nih.gov/19541911) | [web](http://circos.ca) ]
+- **ClicO FS** - 基于Web的交互式Circos在线服务 [ [paper-2015](https://pubmed.ncbi.nlm.nih.gov/26227146) ]
 - **OmicCircos** - 组学数据环形可视化R包 [ [paper-2014](https://pubmed.ncbi.nlm.nih.gov/24526832) | [web](http://www.bioconductor.org/packages/release/bioc/html/OmicCircos.html) ]
 - **J-Circos** - Circos Java版 [ [paper-2014](https://pubmed.ncbi.nlm.nih.gov/25540184) | [web](http://www.australianprostatecentre.org/research/software/jcircos) ]
 - **[circlize](https://github.com/jokergoo/circlize)**:thumbsup: - Circos R包 [ [paper-2014](https://www.ncbi.nlm.nih.gov/pubmed/24930139) ]
+- **[rCircos](https://bitbucket.org/henryhzhang/rcircos/src/master/)** - 环形作图的R包 [ [paper-2013](https://pubmed.ncbi.nlm.nih.gov/23937229) ]
 - **[fujiplot](https://github.com/mkanai/fujiplot)** - GWAS结果Circos展示 [ [paper-2018](https://www.nature.com/articles/s41588-018-0047-6) ]
 - **[circosJS](https://github.com/nicgirault/circosJS)**:thumbsup: - 基于d3的Circos JS库
 
